@@ -5,6 +5,11 @@ All notable changes to the "QuikBak" extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- Updated repository URL to https://github.com/cneskey/quikbak
+- Repository is now publicly available on GitHub
+
 ## [0.0.2] - 2025-03-11
 
 ### Fixed

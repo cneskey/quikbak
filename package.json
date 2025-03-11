@@ -6,7 +6,7 @@
   "publisher": "corey",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coreyneskey/quikbak"
+    "url": "https://github.com/cneskey/quikbak"
   },
   "engines": {
     "vscode": "^1.96.0"

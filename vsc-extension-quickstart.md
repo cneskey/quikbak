@@ -4,7 +4,7 @@
 
 * This folder contains all of the files necessary for your extension.
 * `package.json` - this is the manifest file in which you declare your extension and command.
-  * The sample plugin registers a command and defines its title and command name. With this information VS Code can show the command in the command palette. It doesn’t yet need to load the plugin.
+  * The sample plugin registers a command and defines its title and command name. With this information VS Code can show the command in the command palette. It doesn't yet need to load the plugin.
 * `src/extension.ts` - this is the main file where you will provide the implementation of your command.
   * The file exports one function, `activate`, which is called the very first time your extension is activated (in this case by executing the command). Inside the `activate` function we call `registerCommand`.
   * We pass the function containing the implementation of the command as the second parameter to `registerCommand`.
@@ -42,3 +42,14 @@
 * [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code extension marketplace.
 * Automate builds by setting up [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration).
 * Integrate to the [report issue](https://code.visualstudio.com/api/get-started/wrapping-up#issue-reporting) flow to get issue and feature requests reported by users.
+
+## Repository
+
+The source code for this extension is hosted on GitHub:
+* Repository URL: https://github.com/cneskey/quikbak
+* Issues and contributions are welcome!
+
+## For More Information
+
+* Check the README.md file for detailed documentation and examples
+* Visit the repository page for the latest updates and issue tracking

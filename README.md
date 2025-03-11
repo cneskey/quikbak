@@ -91,6 +91,10 @@ Initial release of QuikBak with:
 ### Building the extension
 
 1. Clone the repository
+   ```bash
+   git clone https://github.com/cneskey/quikbak.git
+   cd quikbak
+   ```
 2. Run `pnpm install` to install dependencies
 3. Run `pnpm run compile` to compile the TypeScript code
 
@@ -151,6 +155,14 @@ Dependencies are kept minimal, with only `zip-lib` as a runtime dependency to en
 ## License
 
 MIT
+
+---
+
+## Repository
+
+The source code for this extension is available on GitHub: [https://github.com/cneskey/quikbak](https://github.com/cneskey/quikbak)
+
+Issues and contributions are welcome!
 
 ---
 
