@@ -1,0 +1,43 @@
+# Change Log
+
+All notable changes to the "QuikBak" extension will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.0.2] - 2025-03-11
+
+### Fixed
+- Resolved dependency issues during packaging with `--no-dependencies` flag
+- Updated @vscode/vsce to latest version (3.2.2) for better compatibility
+- Added PNPM overrides for problematic dependencies
+- Simplified dependencies to only include essential packages
+
+### Changed
+- Updated packaging script in package.json to bypass dependency verification
+- Improved development documentation with dependency management details
+
+## [0.0.1] - 2024-07-08
+
+### Added
+- BAK command for creating backups of files and folders
+- ZIP command for compressing files and folders into ZIP archives
+- UNZIP command for extracting ZIP files
+- Support for folder backup and compression
+- Progress indicators for large file operations
+- Configurable timestamp formats to avoid overwriting backups
+- Settings to customize backup file naming patterns
+- Context-aware commands (UNZIP only appears for ZIP files)
+- Comprehensive unit and integration tests
+- Test coverage for utility functions and folder operations
+
+### Fixed
+- Extension activation events now properly specified
+- Added MIT license file
+- Improved package.json configuration
+- Code organization with separate utility module
+
+### Changed
+- Shortened command names to BAK, ZIP, and UNZIP for better usability
+- Updated documentation with all available features and settings
+- Refactored code for better testability
