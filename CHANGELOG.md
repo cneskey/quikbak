@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated repository URL to https://github.com/cneskey/quikbak
 - Repository is now publicly available on GitHub
 
+## [0.0.4] - 2025-03-31
+
+### Changed
+- Migrated repository to new GitHub location
+- Updated documentation to reflect current state
+- Improved repository structure and organization
+
 ## [0.0.3] - 2025-03-31
 
 ### Security

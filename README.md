@@ -77,13 +77,25 @@ None currently reported.
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.4 (2025-03-31)
+- Migrated repository to new GitHub location
+- Updated documentation to reflect current state
+- Improved repository structure and organization
 
-Initial release of QuikBak with:
-- BAK: Create file and folder backups with timestamps
-- ZIP: Compress files and folders to ZIP archives
-- UNZIP: Extract ZIP files with progress indicators
-- Configuration options for naming patterns and timestamps
+### 0.0.3 (2025-03-31)
+- Enhanced security with path sanitization and input validation
+- Improved error handling and logging
+- Added comprehensive security testing
+
+### 0.0.2 (2025-03-11)
+- Fixed dependency issues during packaging
+- Updated build tools and dependencies
+- Improved development documentation
+
+### 0.0.1 (2024-07-08)
+- Initial release with core functionality
+- BAK, ZIP, and UNZIP commands
+- Configurable backup naming and timestamps
 - Progress indicators for large operations
 
 ## Development
@@ -160,7 +172,7 @@ MIT
 
 ## Repository
 
-The source code for this extension is available on GitHub: [https://github.com/cneskey/quikbak](https://github.com/cneskey/quikbak)
+The source code for this extension is available on GitHub: https://github.com/cneskey/quikbak
 
 Issues and contributions are welcome!
 
