@@ -1,0 +1,148 @@
+{
+  "name": "quikbak",
+  "displayName": "quikbak",
+  "description": "Convenient quick access context-menu file backup.",
+  "version": "0.0.3",
+  "publisher": "corey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cneskey/quikbak"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:quikbak.createBackup",
+    "onCommand:quikbak.compressFile",
+    "onCommand:quikbak.decompressFile",
+    "onCommand:quikbak.test"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quikbak.createBackup",
+        "title": "BAK",
+        "category": "QuikBak"
+      },
+      {
+        "command": "quikbak.compressFile",
+        "title": "ZIP",
+        "category": "QuikBak"
+      },
+      {
+        "command": "quikbak.decompressFile",
+        "title": "UNZIP",
+        "category": "QuikBak"
+      },
+      {
+        "command": "quikbak.test",
+        "title": "Test Command",
+        "category": "QuikBak"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "quikbak.createBackup",
+          "group": "1_modification"
+        },
+        {
+          "command": "quikbak.compressFile",
+          "group": "1_modification"
+        },
+        {
+          "command": "quikbak.decompressFile",
+          "group": "1_modification",
+          "when": "resourceExtname == .zip"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "quikbak.createBackup",
+          "group": "7_modification"
+        },
+        {
+          "command": "quikbak.compressFile",
+          "group": "7_modification"
+        },
+        {
+          "command": "quikbak.decompressFile",
+          "group": "7_modification",
+          "when": "resourceExtname == .zip"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "QuikBak",
+      "properties": {
+        "quikbak.namingPattern": {
+          "type": "string",
+          "default": "{filename}{timestamp}.{ext}",
+          "description": "Pattern for backup file naming. Available placeholders: {filename}, {ext}, {timestamp}",
+          "enum": [
+            "{filename}{timestamp}.{ext}",
+            "{filename}.{ext}.bak",
+            "{filename}_bak.{ext}",
+            "{filename}_{date}.{ext}"
+          ]
+        },
+        "quikbak.timestampFormat": {
+          "type": "string",
+          "default": "YYYY-MM-DD_HHmmss",
+          "description": "Format for timestamps in backup filenames. YYYY=year, MM=month, DD=day, HH=hour, mm=minute, ss=second"
+        },
+        "quikbak.includeTimestamp": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include timestamp in backup file names"
+        },
+        "quikbak.showProgressNotification": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show progress notification for large file operations"
+        },
+        "quikbak.largeFileSizeMB": {
+          "type": "number",
+          "default": 5,
+          "description": "File size in MB that triggers progress indicator"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "package": "pnpm vscode:prepublish && npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/sinon": "^10.0.20",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.2",
+    "eslint": "^9.21.0",
+    "sinon": "^16.1.3",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "zip-lib": "^1.0.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "jackspeak": "2.3.5"
+    }
+  }
+}
